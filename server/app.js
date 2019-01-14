@@ -10,7 +10,7 @@ const app = express();
 const database = process.env.DATABASE
 
 
-mongoose.connect(database)
+mongoose.connect(database, { useNewUrlParser: true })
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
