@@ -41,8 +41,6 @@ reportSchema.post('save', function() {
         html: `<p>Hello ${this.reporter}, Thanks for report, Kami akan mengecek url untuk verifikasi content negative</p>`
     }
     sgMail.send(msg)
-    console.log(`ini model`,msg);
-    
 })
 
 

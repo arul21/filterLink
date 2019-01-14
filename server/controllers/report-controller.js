@@ -40,7 +40,6 @@ module.exports = {
     },
 
     findOne: (req, res) =>{
-        console.log(`1ini ommm`);
         let url = req.body.url
         let reporter = req.body.reporter
         let email = req.body.email
@@ -52,20 +51,6 @@ module.exports = {
                 res.status(200).json(response)
             } else {
                 res.status(400).json({msg:`URL Not Registered`})
-                // Report.create({
-                //     url, reporter, email, nohp
-                // })
-                // .then(newReport =>{
-                //     res.status(201).json({
-                //         err: false,
-                //         message: `Success add report`,
-                //         data: newReport
-                //     })
-                // })
-                // .catch(err =>{
-                //     console.log(`masih di verifikasi`);
-                //     res.status(500).json(err)
-                // })
             }
         })
         .catch(err => {
@@ -192,7 +177,6 @@ module.exports = {
                 console.log(`ini notfound`);
                 
             }
-            
             
         })
         .catch(err =>{

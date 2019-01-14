@@ -3,8 +3,6 @@ const hash = require('../helpers/hash')
 
 module.exports = {
     signin: (req, res) => {
-        console.log(`masukkk brooo`);
-        
         let userName = req.body.userName
         let password = req.body.password
         User.findOne({
